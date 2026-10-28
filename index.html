@@ -16,7 +16,7 @@
 <meta property="og:url" content="https://mrscrawley.github.io/rodos/">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="Полиамидная колбасная оболочка с печатью и гофрированием за 3 дня. Любой объём, склад ходовых позиций, отсрочка платежа, технолог на производстве.">
-<script>document.documentElement.lang='ru';document.documentElement.classList.add('wf');setTimeout(()=>document.documentElement.classList.remove('wf'),800);</script>
+<script>document.documentElement.lang='ru';document.documentElement.classList.add('wf');setTimeout(()=>{document.documentElement.classList.remove('wf');window.__heroPlay&&__heroPlay()},800);</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;800;900&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fira+Sans+Extra+Condensed:wght@800&display=swap">
@@ -405,7 +405,16 @@ footer{padding-block:clamp(56px,7vw,96px) 30px;overflow:hidden;border-top:1px so
       // на телефоне — вертикальная версия, вырезанная из 4K под экран
       v.poster=m?'img/hero-poster-m.webp':'img/hero-poster.webp';
       if(m)v.classList.add('vert');
-      if(!matchMedia('(prefers-reduced-motion: reduce)').matches)v.src=m?'img/hero-m.mp4':'img/hero.mp4';})()</script>
+      // медленный фоновый ролик без вспышек — играет и при «Уменьшении движения»
+      v.muted=true;v.defaultMuted=true;v.playsInline=true;v.setAttribute('webkit-playsinline','');
+      v.src=m?'img/hero-m.mp4':'img/hero.mp4';
+      // телефоны не запускают видео, пока страница скрыта, а в энергосбережении — до первого касания:
+      // пробуем при готовности, при появлении страницы и при первом действии пользователя
+      const play=()=>{if(!v.paused)return;v.muted=true;const p=v.play();if(p)p.catch(()=>{})};
+      window.__heroPlay=play;
+      v.addEventListener('canplay',play,{once:true});v.addEventListener('loadeddata',play,{once:true});
+      ['touchstart','pointerdown','scroll','keydown'].forEach(e=>addEventListener(e,play,{once:true,passive:true}));
+      document.addEventListener('visibilitychange',()=>{if(!document.hidden)play()});})()</script>
     <div class="wrap hero-in">
       <h1><span class="line"><span>Оболочка</span></span><span class="line"><span>с вашей печатью</span></span><span class="line"><span><em>за 3 дня</em></span></span></h1>
       <p class="lead">Полиамидная колбасная оболочка для мясокомбинатов: печать и гофрирование в собственном цехе, ходовые калибры на складе, отсрочка платежа.</p>
@@ -686,7 +695,8 @@ const NS='http://www.w3.org/2000/svg';
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const $=id=>document.getElementById(id);
-if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>document.documentElement.classList.remove('wf'));else document.documentElement.classList.remove('wf');
+const showPage=()=>{document.documentElement.classList.remove('wf');window.__heroPlay&&__heroPlay()};
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(showPage);else showPage();
 function el(tag,attrs,parent){const n=document.createElementNS(NS,tag);for(const k in attrs)n.setAttribute(k,attrs[k]);if(parent)parent.appendChild(n);return n}
 
 /* шапка становится плотной после первого экрана */
