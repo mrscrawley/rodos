@@ -142,8 +142,8 @@ section{position:relative}
 .anat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center;border-top:1px solid var(--line);padding-top:clamp(24px,3vw,40px)}
 .stack-stage{margin:0;position:relative;aspect-ratio:5/4;max-height:460px;max-width:100%;display:grid;place-items:center;perspective:1400px;
   background:radial-gradient(closest-side,rgba(208,20,47,.22),rgba(208,20,47,0) 70%)}
-.stack{position:relative;width:62%;aspect-ratio:1.5/1;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-38deg)}
-.slab{position:absolute;inset:0;border-radius:14px;transform:translateZ(calc(var(--i) * var(--gap,12px)));transition:transform .2s linear}
+.stack{position:relative;width:62%;aspect-ratio:1.5/1;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-38deg);will-change:transform}
+.slab{position:absolute;inset:0;border-radius:14px;transform:translateZ(calc(var(--i) * var(--gap,12px)));will-change:transform;backface-visibility:hidden}
 .s0{background:linear-gradient(135deg,#F7C6CF,#E8A0AE);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
 .s1,.s3{background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.04));box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55),0 0 18px rgba(255,255,255,.06)}
 .s2{background:linear-gradient(135deg,rgba(246,176,58,.92),rgba(196,112,10,.85));box-shadow:inset 0 0 0 1px rgba(255,214,140,.7)}
@@ -893,9 +893,11 @@ if(window.gsap&&window.ScrollTrigger&&!reduce){
   gsap.to('.print-bg',{yPercent:14,ease:'none',scrollTrigger:{trigger:'.print',start:'top bottom',end:'bottom top',scrub:true}});
   gsap.fromTo('.cut img',{scale:1.12},{scale:1,ease:'none',scrollTrigger:{trigger:'.cut',start:'top bottom',end:'bottom top',scrub:true}});
   // слои расходятся при прокрутке
-  const stack=$('stack');
-  ScrollTrigger.create({trigger:'#anatomy',start:'top 80%',end:'center 40%',scrub:true,
-    onUpdate:s=>{stack.style.setProperty('--gap',(12+s.progress*30)+'px');stack.style.transform=`rotateX(${58-s.progress*6}deg) rotateZ(${-38+s.progress*8}deg)`}});
+  // слои двигаются только через transform (видеокарта), scrub с инерцией сглаживает рывки пальца на телефоне
+  const stack=$('stack'),slabs=gsap.utils.toArray('#stack .slab'),turn={p:0};
+  const layersTl=gsap.timeline({scrollTrigger:{trigger:'#anatomy',start:'top 80%',end:'center 40%',scrub:.9}});
+  slabs.forEach((el,i)=>layersTl.fromTo(el,{z:i*12},{z:i*42,ease:'none',force3D:true},0));
+  layersTl.to(turn,{p:1,ease:'none',onUpdate:()=>{stack.style.transform=`rotateX(${58-turn.p*6}deg) rotateZ(${-38+turn.p*8}deg)`}},0);
   // шкала сроков заполняется
   gsap.fromTo('#tlFill',{scaleX:0},{scaleX:1,ease:'none',scrollTrigger:{trigger:'.timeline',start:'top 85%',end:'top 45%',scrub:true}});
   // большой логотип в подвале поднимается при прокрутке
