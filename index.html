@@ -146,6 +146,19 @@ section{position:relative}
   background:radial-gradient(closest-side,rgba(208,20,47,.22),rgba(208,20,47,0) 70%)}
 .stack{position:relative;width:62%;aspect-ratio:1.5/1;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-38deg);will-change:transform}
 .slab{position:absolute;inset:0;border-radius:14px;transform:translateZ(calc(var(--i) * var(--gap,12px)));will-change:transform;backface-visibility:hidden}
+/* наведение: слой ↔ строка списка (только мышь) */
+.slab{transition:opacity .3s ease,filter .3s ease}
+.layers-list li{transition:opacity .3s ease,background-color .3s ease}
+.layers-list li > div{transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.layers-list b::before{transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s}
+.anat.hl .slab:not(.on){opacity:.28}
+.anat.hl .slab.on{filter:brightness(1.18) saturate(1.1)}
+.anat.hl .layers-list li:not(.on){opacity:.4}
+.layers-list li.on{background:linear-gradient(90deg,rgba(244,240,238,.06),rgba(244,240,238,0) 80%)}
+.layers-list li.on > div{transform:translateX(8px)}
+.layers-list li.on b{color:#fff}
+.layers-list li.on b::before{transform:scale(1.35);box-shadow:0 0 14px var(--c),inset 0 0 0 1px rgba(255,255,255,.25)}
+@media (pointer:fine){.slab,.layers-list li{cursor:default}}
 .s0{background:linear-gradient(135deg,#F7C6CF,#E8A0AE);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
 .s1,.s3{background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.04));box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55),0 0 18px rgba(255,255,255,.06)}
 .s2{background:linear-gradient(135deg,rgba(246,176,58,.92),rgba(196,112,10,.85));box-shadow:inset 0 0 0 1px rgba(255,214,140,.7)}
@@ -718,6 +731,16 @@ hdr.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{hdr.cl
   // страховка: через 6 с догружаем всё, что ещё не загружено
   setTimeout(()=>document.querySelectorAll('img.lz').forEach(load),6000);
 })();
+
+/* ---------- слои: наведение на слой подсвечивает его строку и наоборот ---------- */
+if(matchMedia('(hover:hover) and (pointer:fine)').matches){
+  const anat=document.querySelector('.anat'),sl=[...document.querySelectorAll('#stack .slab')],li=[...document.querySelectorAll('.layers-list li')];
+  // слой s0 — внутренний (последняя строка), s4 — внешний (первая)
+  const pairOf=i=>li[li.length-1-i];
+  const set=i=>{anat.classList.toggle('hl',i!=null);sl.forEach((e,k)=>e.classList.toggle('on',k===i));li.forEach(e=>e.classList.toggle('on',i!=null&&e===pairOf(i)))};
+  sl.forEach((e,i)=>{e.addEventListener('pointerenter',()=>set(i));e.addEventListener('pointerleave',()=>set(null))});
+  li.forEach((e,k)=>{e.addEventListener('pointerenter',()=>set(li.length-1-k));e.addEventListener('pointerleave',()=>set(null))});
+}
 
 /* ---------- конфигуратор ---------- */
 // Фото белого батона перекрашивается умножением, маркировка ложится поверх с маской цилиндра
