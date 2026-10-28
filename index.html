@@ -154,7 +154,10 @@ section{position:relative}
 .anat.hl .slab:not(.on){opacity:.28}
 .anat.hl .slab.on{filter:brightness(1.18) saturate(1.1)}
 .anat.hl .layers-list li:not(.on){opacity:.4}
-.layers-list li.on{background:linear-gradient(90deg,rgba(244,240,238,.06),rgba(244,240,238,0) 80%)}
+.layers-list li{position:relative;isolation:isolate}
+.layers-list li::after{content:"";position:absolute;inset:0 -16px;border-radius:12px;z-index:-1;background:linear-gradient(90deg,rgba(244,240,238,.07),rgba(244,240,238,.015) 85%);opacity:0;transition:opacity .3s ease}
+.layers-list li.on::after{opacity:1}
+.layers-list li.on::before{color:#fff;transition:color .3s}
 .layers-list li.on > div{transform:translateX(8px)}
 .layers-list li.on b{color:#fff}
 .layers-list li.on b::before{transform:scale(1.35);box-shadow:0 0 14px var(--c),inset 0 0 0 1px rgba(255,255,255,.25)}
