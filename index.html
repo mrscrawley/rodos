@@ -1,0 +1,925 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Родос — полиамидная оболочка</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%23D0142F'/%3E%3Ccircle cx='16' cy='16' r='9.5' fill='none' stroke='%23F4F0EE' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='6.5' fill='none' stroke='%23AEB9C0' stroke-width='1.6'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23F4F0EE'/%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Родос">
+<meta property="og:title" content="Родос — полиамидная оболочка с вашей печатью за 3 дня">
+<meta property="og:description" content="Полиамидная колбасная оболочка с печатью и гофрированием за 3 дня. Любой объём, склад ходовых позиций, отсрочка платежа, технолог на производстве.">
+<meta property="og:image" content="https://mrscrawley.github.io/rodos/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://mrscrawley.github.io/rodos/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Полиамидная колбасная оболочка с печатью и гофрированием за 3 дня. Любой объём, склад ходовых позиций, отсрочка платежа, технолог на производстве.">
+<script>document.documentElement.lang='ru';document.documentElement.classList.add('wf');setTimeout(()=>document.documentElement.classList.remove('wf'),800);</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;800;900&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Fira+Sans+Extra+Condensed:wght@800&display=swap">
+<style>html,body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+<style>
+/* Layout: кинематографичная студийная съёмка — тёмная сцена, кармин фона из фотографии батонов,
+   широкий гротеск как вывеска, моно-подписи как техпаспорт. Один визуальный мир, без светлой темы. */
+:root{
+  --ink:#0D0A0B;
+  --ink-2:#161112;
+  --crimson:#5A0711;
+  --red:#D0142F;
+  --bone:#F4F0EE;
+  --mute:#A3989A;
+  --steel:#AEB9C0;     /* платина — как алюминиевая клипса */
+  --line:rgba(244,240,238,.14);
+  --f-display:"Unbounded","Arial Black",system-ui,sans-serif;
+  --f-body:"Onest","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+  --f-print:"Fira Sans Extra Condensed","Arial Narrow",sans-serif;
+  --gut:max(16px,env(safe-area-inset-left,0px));
+  --gutr:max(16px,env(safe-area-inset-right,0px));
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:84px}
+body{background:var(--ink);color:var(--bone);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1320px;margin:0 auto;padding-left:var(--gut);padding-right:var(--gutr)}
+h1,h2,h3{font-family:var(--f-display);margin:0;line-height:1;letter-spacing:-.02em;text-wrap:balance}
+h2{font-size:clamp(1.9rem,3.8vw,3.3rem);font-weight:500;letter-spacing:-.03em;line-height:1.05}
+h3{font-size:1.15rem;font-weight:600;letter-spacing:0}
+p{margin:0}
+.mono{font:500 .74rem/1.3 var(--f-mono);letter-spacing:.14em;text-transform:uppercase}
+.tag{display:inline-flex;align-items:center;gap:10px;color:var(--mute)}
+.tag::before{content:"";width:28px;height:1px;background:currentColor}
+.lead{font-size:clamp(1.05rem,1.6vw,1.25rem);color:var(--mute);max-width:56ch}
+:focus-visible{outline:2px solid var(--steel);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;gap:12px;font:600 .95rem/1 var(--f-body);padding:18px 26px;border-radius:999px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),background .25s,color .25s}
+.btn svg{width:18px;height:18px;transition:transform .25s}
+.btn:hover svg{transform:translateX(4px)}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:#E8203D;transform:translateY(-2px)}
+.btn-line{border-color:rgba(244,240,238,.35);color:var(--bone)}
+.btn-line:hover{background:var(--bone);color:var(--ink)}
+
+/* пока грузятся шрифты, страница скрыта (не дольше 0,8 с) — без «прыжка» системного шрифта */
+html.wf body{opacity:0}
+body{transition:opacity .45s ease}
+
+[hidden]{display:none!important}
+.u img,.shirr figure img{height:auto}
+/* большие мониторы: шире сетка и чуть крупнее базовый размер */
+@media (min-width:1800px){html{font-size:18px}.wrap{max-width:1560px}}
+@media (min-width:2300px){html{font-size:20px}.wrap{max-width:1760px}}
+
+.skip{position:fixed;left:16px;top:calc(env(safe-area-inset-top,0px) + 12px);z-index:100;padding:12px 18px;border-radius:999px;background:var(--bone);color:var(--ink);font-weight:600;text-decoration:none;transform:translateY(-200%);transition:transform .2s}
+.skip:focus{transform:none}
+main:focus{outline:none}
+
+/* header */
+.top{position:fixed;left:0;right:0;top:env(safe-area-inset-top,0px);z-index:50;transition:background .35s,border-color .35s;border-bottom:1px solid transparent}
+.top.solid{background:rgba(13,10,11,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-color:var(--line)}
+.top .wrap{display:flex;align-items:center;gap:28px;height:76px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo svg{width:34px;height:34px}
+.logo b{font:900 1.25rem/1 var(--f-display);letter-spacing:.08em}
+.nav{display:flex;gap:26px;margin-left:auto;font-size:.93rem}
+.nav a{text-decoration:none;color:rgba(244,240,238,.75);transition:color .2s}
+.nav a:hover{color:#fff}
+.top .btn{padding:12px 20px;font-size:.88rem}
+.menu-btn{display:none;background:none;border:1px solid rgba(244,240,238,.35);color:var(--bone);border-radius:999px;width:44px;height:44px;cursor:pointer;place-items:center}
+.menu-btn svg{width:18px;height:18px}
+@media (max-width:980px){
+  .nav{display:none}.top .btn{margin-left:auto}.menu-btn{display:grid}
+  .top.open{background:rgba(13,10,11,.97);border-color:var(--line)}
+  .top.open .nav{display:grid;position:absolute;left:0;right:0;top:76px;padding:8px max(16px,env(safe-area-inset-right,0px)) 24px max(16px,env(safe-area-inset-left,0px));background:rgba(13,10,11,.97);border-bottom:1px solid var(--line);gap:0;font-size:1.15rem}
+  .top.open .nav a{padding:14px 0;border-top:1px solid var(--line);color:var(--bone)}
+}
+
+/* hero */
+.hero{position:relative;min-height:min(100svh,960px);display:grid;align-items:end;overflow:hidden;background:var(--crimson);isolation:isolate}
+.hero-bg{position:absolute;inset:0;z-index:-2}
+.hero-bg video{width:100%;height:100%;object-fit:cover;object-position:62% 50%;display:block}
+.hero-bg video.vert{object-position:50% 45%}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:
+  linear-gradient(90deg,rgba(40,3,8,.92) 0%,rgba(60,5,12,.62) 38%,rgba(60,5,12,0) 70%),
+  linear-gradient(0deg,rgba(13,10,11,1) 0%,rgba(13,10,11,0) 30%)}
+.hero-in{padding-block:150px 40px;display:grid;gap:34px}
+.hero .tag{color:rgba(244,240,238,.75)}
+.hero h1{font-size:clamp(2.4rem,6.4vw,5.8rem);font-weight:800;text-transform:uppercase;letter-spacing:-.02em;max-width:13ch}
+.hero h1 .line{display:block;overflow:hidden;padding-bottom:.06em}
+.hero h1 .line > span{display:inline-block}
+.hero h1 em{font-style:normal;background:linear-gradient(180deg,#FFFFFF 0%,#D9DFE3 45%,#8E9AA2 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lead{color:rgba(244,240,238,.82);max-width:46ch}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px}
+.hero-meta{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);margin-top:26px}
+.hero-meta div{padding:22px 20px 6px 0;display:grid;gap:6px}
+.hero-meta div + div{padding-left:20px;border-left:1px solid var(--line)}
+.hero-meta b{font:500 clamp(1.2rem,2vw,1.7rem)/1 var(--f-display);letter-spacing:-.02em}
+.hero-meta span{color:rgba(244,240,238,.66);font-size:.9rem;line-height:1.4}
+@media (max-width:820px){
+  .hero-bg video:not(.vert){object-position:72% 40%}
+  .hero::after{background:linear-gradient(0deg,rgba(13,10,11,1) 8%,rgba(50,4,10,.72) 55%,rgba(50,4,10,.35) 100%)}
+  .hero-meta{grid-template-columns:1fr 1fr}
+  .hero-meta div:nth-child(3){padding-left:0;border-left:0}
+  .hero-meta div:nth-child(n+3){border-top:1px solid var(--line)}
+}
+
+section{position:relative}
+.sec{padding-block:clamp(80px,11vw,150px)}
+.sec-head{display:grid;gap:22px;margin-bottom:clamp(40px,6vw,72px)}
+
+/* anatomy */
+.anat-head{grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);margin-bottom:clamp(28px,4vw,48px);align-items:end;column-gap:clamp(32px,6vw,90px);max-width:none}
+.anat-head .tag{grid-column:1/-1}
+.anat-head h2{max-width:none}
+@media (max-width:900px){.anat-head{grid-template-columns:1fr}}
+.anat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,64px);align-items:center;border-top:1px solid var(--line);padding-top:clamp(24px,3vw,40px)}
+.stack-stage{margin:0;position:relative;aspect-ratio:5/4;max-height:460px;max-width:100%;display:grid;place-items:center;perspective:1400px;
+  background:radial-gradient(closest-side,rgba(208,20,47,.22),rgba(208,20,47,0) 70%)}
+.stack{position:relative;width:62%;aspect-ratio:1.5/1;transform-style:preserve-3d;transform:rotateX(58deg) rotateZ(-38deg)}
+.slab{position:absolute;inset:0;border-radius:14px;transform:translateZ(calc(var(--i) * var(--gap,12px)));transition:transform .2s linear}
+.s0{background:linear-gradient(135deg,#F7C6CF,#E8A0AE);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35)}
+.s1,.s3{background:linear-gradient(135deg,rgba(255,255,255,.22),rgba(255,255,255,.04));box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.55),0 0 18px rgba(255,255,255,.06)}
+.s2{background:linear-gradient(135deg,rgba(246,176,58,.92),rgba(196,112,10,.85));box-shadow:inset 0 0 0 1px rgba(255,214,140,.7)}
+.s4{background:linear-gradient(135deg,#D61F3A,#7E0717);box-shadow:inset 0 0 0 1px rgba(255,140,150,.45),inset 30px 30px 60px rgba(255,255,255,.12)}
+.layers-list{list-style:none;margin:0;padding:0;counter-reset:l}
+.layers-list li{counter-increment:l;display:grid;grid-template-columns:40px 1fr;gap:12px;padding:13px 0;border-top:1px solid var(--line)}
+.layers-list li:first-child{border-top:0}
+.layers-list li:last-child{border-bottom:1px solid var(--line)}
+.layers-list li::before{content:"0" counter(l);font:500 .76rem var(--f-mono);color:var(--steel);padding-top:3px}
+.layers-list li > div{display:grid;grid-template-columns:minmax(150px,.8fr) minmax(0,1.4fr);gap:4px 20px;align-items:baseline}
+@media (max-width:1200px){.layers-list li > div{grid-template-columns:1fr}}
+.layers-list b{display:flex;align-items:center;gap:10px;font-weight:600;font-size:1rem}
+.layers-list b::before{content:"";width:12px;height:12px;border-radius:3px;background:var(--c);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25)}
+.layers-list li:nth-child(1){--c:#C9132E}
+.layers-list li:nth-child(2),.layers-list li:nth-child(4){--c:rgba(255,255,255,.3)}
+.layers-list li:nth-child(3){--c:#E8A030}
+.layers-list li:nth-child(5){--c:#F0B4C1}
+.layers-list span{color:var(--mute);font-size:.9rem;line-height:1.45}
+.fine{font:400 .78rem/1.5 var(--f-mono);color:var(--mute);margin-top:18px}
+@media (max-width:900px){.anat{grid-template-columns:1fr}.stack-stage{max-width:520px;width:100%;margin:0 auto}}
+
+/* benefits with cut photo */
+#anatomy{background:linear-gradient(180deg,var(--ink) 0%,var(--ink) 45%,#020101 100%)}
+.cut{position:relative;background:linear-gradient(180deg,#020101 0%,#020101 calc(100% - clamp(260px,28vw,440px)),var(--ink) 100%);padding-block:clamp(48px,7vw,110px)}
+.cut img{width:100%;height:clamp(420px,52vw,780px);object-fit:cover;object-position:50% 45%;-webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.25) 10%,rgba(0,0,0,.7) 22%,#000 34%,#000 72%,transparent 100%),linear-gradient(90deg,transparent 0%,#000 6%,#000 94%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.25) 10%,rgba(0,0,0,.7) 22%,#000 34%,#000 72%,transparent 100%),linear-gradient(90deg,transparent 0%,#000 6%,#000 94%,transparent 100%);mask-composite:intersect}
+.cut .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.5fr);gap:clamp(28px,5vw,72px);align-items:start;padding-block:0;position:relative;margin-top:clamp(8px,2vw,32px)}
+.cut .wrap > div:first-child{display:grid;gap:22px}
+.cut-h,.sub-h{font:500 clamp(1.3rem,2.2vw,1.8rem)/1.15 var(--f-display);letter-spacing:-.03em;margin:0}
+.cut-h{border-top:1px solid rgba(244,240,238,.3);padding-top:14px}
+.bens{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px 36px}
+.bens div{display:grid;gap:4px;align-content:start;border-top:1px solid rgba(244,240,238,.3);padding-top:14px}
+.bens b{font-weight:600}
+.bens span{font-size:.92rem;color:rgba(244,240,238,.7)}
+@media (max-width:820px){.cut .wrap{grid-template-columns:1fr}.cut img{height:auto;aspect-ratio:16/10}}
+@media (max-width:440px){.bens{grid-template-columns:1fr}}
+
+/* uses — единая предметная съёмка на сланце */
+.ugrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;border-radius:24px;overflow:hidden}
+.u{display:grid;grid-template-rows:auto 1fr;background:#0f0c0d;overflow:hidden}
+.u img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.u .body{padding:22px 22px 26px;display:grid;gap:6px;align-content:start;position:relative;z-index:1;background:#0f0c0d}
+.u:hover img{transform:scale(1.04)}
+.u .cal{font:500 .74rem var(--f-mono);letter-spacing:.1em;color:var(--steel)}
+.u h3{font-size:1.1rem}
+.u p{font-size:.9rem;color:rgba(244,240,238,.72);line-height:1.5}
+@media (max-width:1000px){.ugrid{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.u .body{padding:14px 14px 18px}.u h3{font-size:.98rem}.u p{font-size:.84rem}}
+
+/* builder — как автомобильный конфигуратор: продукт в луче света, тихие настройки под ним */
+#uses{background:linear-gradient(180deg,var(--ink) 0%,var(--ink) 45%,#000 100%)}
+.builder{background:linear-gradient(180deg,#000 0%,#000 72%,var(--ink) 100%)}
+.viewer{position:relative;display:grid;justify-items:center;gap:8px;padding-block:clamp(10px,3vw,40px) clamp(20px,3vw,36px)}
+.viewer::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;background:radial-gradient(45% 55% at 50% 44%,rgba(255,255,255,.06),rgba(255,255,255,0) 70%)}
+.loaf{position:relative;isolation:isolate;container-type:inline-size;width:min(100%,1080px);
+  -webkit-mask-image:radial-gradient(70% 90% at 50% 45%,#000 70%,transparent 100%);mask-image:radial-gradient(70% 90% at 50% 45%,#000 70%,transparent 100%)}
+.loaf img{display:block;width:100%;height:auto}
+.loaf .tint{position:absolute;inset:0;background:var(--c);mix-blend-mode:multiply;transition:background .6s ease;
+  -webkit-mask-image:linear-gradient(90deg,#000 3.4%,transparent 3.6%,transparent 5.9%,#000 6.1%,#000 93.9%,transparent 94.1%,transparent 96.4%,#000 96.6%);
+          mask-image:linear-gradient(90deg,#000 3.4%,transparent 3.6%,transparent 5.9%,#000 6.1%,#000 93.9%,transparent 94.1%,transparent 96.4%,#000 96.6%)}
+.loaf .body{position:absolute;left:6.4%;right:6.4%;top:26.4%;height:37.2%;border-radius:999px/50%;overflow:hidden;z-index:2;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%)}
+.loaf .ink{position:absolute;inset:0;display:grid;align-content:space-evenly;
+  -webkit-mask-image:linear-gradient(180deg,transparent 4%,rgba(0,0,0,.5) 16%,#000 32%,#000 64%,rgba(0,0,0,.45) 84%,transparent 96%);
+          mask-image:linear-gradient(180deg,transparent 4%,rgba(0,0,0,.5) 16%,#000 32%,#000 64%,rgba(0,0,0,.45) 84%,transparent 96%)}
+.loaf .ink div{white-space:nowrap;font:600 1.55cqw/1 var(--f-body);letter-spacing:.32em;text-transform:uppercase;color:var(--inkc);opacity:.88}
+.loaf .ink div:nth-child(2){transform:translateX(-14%)}
+.loaf .ink[data-dark]{mix-blend-mode:multiply}
+.loaf .gloss{position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,0) 6%,rgba(255,255,255,.3) 15%,rgba(255,255,255,.03) 26%,rgba(255,255,255,0) 60%,rgba(0,0,0,.18) 100%);pointer-events:none}
+.loaf .sweep{position:absolute;inset:-10% 0;background:linear-gradient(105deg,rgba(255,255,255,0) 35%,rgba(255,255,255,.42) 50%,rgba(255,255,255,0) 65%);transform:translateX(-110%);pointer-events:none;mix-blend-mode:screen}
+.loaf .sweep.go{animation:sweep 1.15s cubic-bezier(.4,0,.2,1)}
+@keyframes sweep{to{transform:translateX(110%)}}
+.cfg-line{font:500 .74rem/1.6 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:rgba(244,240,238,.55);text-align:center;max-width:80ch;overflow-wrap:anywhere}
+.cfg-panel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(24px,4vw,56px);border-top:1px solid var(--line);padding-top:clamp(22px,3vw,34px)}
+.cfg-panel > div{display:grid;gap:16px;align-content:start;min-width:0}
+.cfg-panel .h{display:flex;justify-content:space-between;gap:10px;font:500 .68rem var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.cfg-panel .h output{color:var(--bone);letter-spacing:.08em}
+.hint{font-size:.82rem;color:var(--mute)}
+input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:1px;background:rgba(244,240,238,.28);margin:10px 0 0}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:13px;height:13px;border-radius:50%;background:var(--bone);cursor:grab;box-shadow:0 0 0 5px rgba(244,240,238,.1)}
+input[type=range]::-moz-range-thumb{width:13px;height:13px;border:0;border-radius:50%;background:var(--bone);cursor:grab}
+.dots{display:flex;flex-wrap:wrap;gap:12px}
+.dots button{width:24px;height:24px;border-radius:50%;padding:0;border:0;cursor:pointer;background:var(--c);
+  box-shadow:inset 0 -5px 8px rgba(0,0,0,.25),inset 0 3px 5px rgba(255,255,255,.25);transition:box-shadow .25s,transform .25s}
+.dots button:hover{transform:scale(1.08)}
+.dots button[aria-pressed="true"]{box-shadow:0 0 0 3px #000,0 0 0 4px var(--bone),inset 0 -5px 8px rgba(0,0,0,.25)}
+.dots.small{gap:10px}
+.dots.small button{width:16px;height:16px}
+.txt{width:100%;font:500 .95rem var(--f-body);letter-spacing:.02em;padding:6px 0 10px;border:0;border-bottom:1px solid rgba(244,240,238,.28);background:transparent;color:var(--bone);border-radius:0}
+.txt:focus{outline:none;border-color:var(--bone)}
+.seg2{display:flex;gap:22px}
+.seg2 button{background:none;border:0;padding:0 0 8px;font:500 .95rem var(--f-body);color:var(--mute);cursor:pointer;border-bottom:1px solid transparent}
+.seg2 button[aria-pressed="true"]{color:var(--bone);border-color:var(--bone)}
+.cfg-cta{display:flex;justify-content:center;margin-top:clamp(28px,4vw,48px)}
+@media (max-width:1000px){.cfg-panel{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.cfg-panel{grid-template-columns:1fr}.cfg-cta .btn{width:100%;justify-content:center}}
+
+/* print */
+.print{position:relative;overflow:hidden;isolation:isolate}
+.print-bg{position:absolute;inset:-10% 0;z-index:-2}
+.print-bg img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.print::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(13,10,11,1) 0%,rgba(13,10,11,.82) 12%,rgba(13,10,11,.5) 45%,rgba(13,10,11,.85) 86%,rgba(13,10,11,1) 100%)}
+.pgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.pgrid div{background:rgba(13,10,11,.72);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);padding:26px;display:grid;gap:10px;align-content:start}
+.pgrid b{font:500 1.05rem var(--f-display);letter-spacing:-.02em}
+.pgrid span{color:rgba(244,240,238,.72);font-size:.94rem}
+.timeline{margin-top:clamp(48px,7vw,90px)}
+.tl-bar{position:relative;height:2px;background:rgba(255,255,255,.18);margin:0 8px}
+.tl-fill{position:absolute;inset:0;background:linear-gradient(90deg,rgba(174,185,192,.3),var(--steel));transform-origin:left}
+.tl-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:-7px}
+.tl-steps li{list-style:none;display:grid;gap:8px;padding-right:16px}
+.tl-steps li::before{content:"";width:14px;height:14px;border-radius:50%;background:var(--bone);box-shadow:0 0 0 5px rgba(174,185,192,.18)}
+.tl-steps .d{font:400 clamp(1.5rem,2.6vw,2.2rem)/1 var(--f-display);letter-spacing:-.03em;margin-top:14px}
+.tl-steps b{font-weight:600}
+.tl-steps span{font-size:.92rem;color:rgba(244,240,238,.7)}
+.tl-steps ol,.tl-steps{padding:0}
+@media (max-width:980px){.pgrid{grid-template-columns:1fr 1fr}.tl-steps{grid-template-columns:1fr 1fr;gap:28px 0}.tl-bar{display:none}}
+@media (max-width:480px){.pgrid{grid-template-columns:1fr}}
+
+.shirr{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:center;margin-top:clamp(56px,7vw,96px);padding-top:clamp(40px,5vw,64px);border-top:1px solid var(--line)}
+.shirr-text{display:grid;gap:18px;align-content:center}
+.shirr figure{margin:0;border-radius:22px;overflow:hidden}
+.shirr figure img{width:100%;aspect-ratio:3/2;object-fit:cover}
+@media (max-width:900px){.shirr{grid-template-columns:1fr}}
+
+/* versus */
+
+/* tech */
+.tech{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(28px,5vw,72px);align-items:center}
+.tech figure{margin:0;border-radius:22px;overflow:hidden;position:relative;aspect-ratio:4/5;background:#000}
+.tech figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,10,11,.25) 0%,rgba(13,10,11,0) 30%,rgba(13,10,11,.55) 100%);pointer-events:none}
+.tech figure img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:68% 50%;filter:brightness(.72) contrast(1.08) saturate(.9)}
+.tech figure figcaption{z-index:1;position:absolute;left:18px;bottom:18px;right:18px;padding:16px 18px;border-radius:16px;background:rgba(13,10,11,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:.95rem}
+.tech figure figcaption b{display:block;font:500 1.6rem/1 var(--f-display);color:var(--steel);margin-bottom:6px}
+.issues{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.issues li{padding:11px 16px;border-radius:999px;border:1px solid var(--line);font-size:.93rem;background:rgba(255,255,255,.03)}
+.quote{font:400 clamp(1.2rem,2vw,1.55rem)/1.35 var(--f-display);letter-spacing:-.02em;margin-top:32px;padding-left:20px;border-left:1px solid var(--steel)}
+@media (min-width:901px){.tech figure{order:2}}
+@media (max-width:900px){.tech{grid-template-columns:1fr}.tech figure{aspect-ratio:4/3}}
+
+/* статьи: карточки + окно чтения */
+.arts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2px;border-radius:20px;overflow:hidden}
+.art{background:#141011;padding:clamp(20px,2.4vw,30px);display:grid;gap:14px;align-content:start;text-align:left;border:0;color:inherit;cursor:pointer;font:inherit;min-height:260px;transition:background .3s}
+.art:hover{background:#1c1617}
+.art small{font:500 .68rem var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--steel)}
+.art b{font:500 clamp(1.05rem,1.5vw,1.25rem)/1.25 var(--f-display);letter-spacing:-.02em}
+.art span{color:var(--mute);font-size:.9rem;line-height:1.5}
+.art i{font-style:normal;margin-top:auto;font-size:.88rem;color:var(--bone);display:flex;align-items:center;gap:8px}
+.art i svg{width:16px;height:16px}
+@media (max-width:1000px){.arts{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.arts{grid-template-columns:1fr}.art{min-height:0}}
+dialog.reader{width:min(760px,calc(100% - 24px));max-height:calc(100% - 48px);padding:0;border:1px solid var(--line);border-radius:24px;background:#120e0f;color:var(--bone)}
+dialog.reader::backdrop{background:rgba(0,0,0,.7);backdrop-filter:blur(6px)}
+.reader-in{padding:clamp(24px,4vw,48px);display:grid;gap:18px}
+.reader-in h3{font:500 clamp(1.5rem,3vw,2.2rem)/1.1 var(--f-display);letter-spacing:-.03em;margin:0;padding-right:40px}
+.reader-in h4{font:500 1.1rem/1.3 var(--f-display);letter-spacing:-.02em;margin:10px 0 0}
+.reader-in p,.reader-in li{color:rgba(244,240,238,.8);line-height:1.7;margin:0}
+.reader-in ul{margin:0;padding-left:20px;display:grid;gap:6px}
+.reader-in .src{border-top:1px solid var(--line);padding-top:16px;font-size:.85rem}
+.reader-in .src b{display:block;font:500 .68rem var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:8px}
+.reader-in .src a{color:var(--steel);overflow-wrap:anywhere}
+.reader-x{position:sticky;top:0;float:right;margin:14px 14px 0 0;width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:#120e0f;color:var(--bone);cursor:pointer;font-size:20px;line-height:1;z-index:2}
+
+.credit{color:var(--bone);text-decoration:none;border-bottom:1px solid rgba(244,240,238,.3);transition:border-color .2s}
+.credit:hover{border-color:var(--bone)}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:clamp(32px,6vw,96px);align-items:start}
+.faq-head{position:sticky;top:110px;margin:0;justify-items:start}
+
+@media (max-width:900px){.faq-grid{grid-template-columns:1fr}.faq-head{position:static}}
+.faq{min-width:0}
+.faq details{border-top:1px solid var(--line)}
+.faq details:last-child{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;padding:20px 0;font:600 1.08rem/1.35 var(--f-body)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:16px;height:16px;margin-top:4px;background:linear-gradient(var(--steel),var(--steel)) center/100% 2px no-repeat,linear-gradient(var(--steel),var(--steel)) center/2px 100% no-repeat;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{color:var(--mute);padding-bottom:20px;max-width:62ch}
+
+/* contact */
+.contact{background:radial-gradient(90% 120% at 0% 0%,rgba(140,10,29,.45) 0%,rgba(140,10,29,0) 60%),linear-gradient(160deg,#1c1617 0%,#120e0f 100%);border:1px solid var(--line);border-radius:36px;margin-inline:max(10px,env(safe-area-inset-left,0px));overflow:hidden;position:relative;isolation:isolate}
+.contact::before{content:"";position:absolute;right:-10%;top:-30%;width:70%;aspect-ratio:1;border-radius:50%;background:radial-gradient(closest-side,rgba(174,185,192,.12),rgba(174,185,192,0));z-index:-1}
+.cgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,5vw,72px);align-items:start}
+.cards{display:grid;gap:10px;margin-top:36px}
+.cc{display:grid;grid-template-columns:1fr auto;gap:2px 12px;align-items:center;padding:16px 18px;border-radius:18px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.12)}
+.cc small{grid-column:1/-1;color:rgba(244,240,238,.6)}
+.cc .v{font-weight:600;font-size:1.08rem;overflow-wrap:anywhere}
+.ph{background:repeating-linear-gradient(-45deg,rgba(174,185,192,.22) 0 6px,transparent 6px 12px);border-radius:4px;padding:0 6px}
+.copy{font:500 .74rem var(--f-mono);letter-spacing:.06em;background:transparent;border:1px solid rgba(255,255,255,.3);border-radius:999px;padding:8px 12px;color:var(--bone);cursor:pointer}
+.copy:hover{background:var(--bone);color:var(--ink)}
+form{display:grid;gap:22px;align-content:start;padding:clamp(4px,1vw,10px) 0}
+form h3{font:500 clamp(1.3rem,2vw,1.6rem)/1.1 var(--f-display);letter-spacing:-.03em;margin-bottom:4px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.f{display:grid;gap:4px}
+.f label{font:500 .68rem var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute)}
+.f input,.f textarea{font:400 1rem var(--f-body);padding:10px 0 12px;border:0;border-bottom:1px solid rgba(244,240,238,.25);border-radius:0;background:transparent;color:var(--bone);width:100%;transition:border-color .2s}
+.f input::placeholder,.f textarea::placeholder{color:rgba(244,240,238,.32)}
+.f input:focus,.f textarea:focus{outline:none;border-color:var(--bone)}
+.f textarea{min-height:96px;resize:vertical}
+form .btn{justify-content:center;margin-top:6px}
+.err{font-size:.8rem;color:#FF8A8A;min-height:0}
+.err:empty{display:none}
+.f input[aria-invalid="true"]{border-color:#FF8A8A}
+.sent{display:grid;gap:18px;align-content:start;justify-items:start;padding:clamp(4px,1vw,10px) 0}
+.sent-ico{width:52px;height:52px;color:var(--bone)}
+.sent h3{font:500 clamp(1.4rem,2.4vw,1.9rem)/1.1 var(--f-display);letter-spacing:-.03em;margin:0}
+.sent p{color:var(--mute);max-width:46ch}
+.sent-sum{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;margin:0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);width:100%;font-size:.92rem}
+.sent-sum dt{font:500 .68rem/1.9 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.sent-sum dd{margin:0;color:var(--bone);overflow-wrap:anywhere;white-space:pre-line}
+.note{font-size:.9rem;padding:12px 0 0;border-top:1px solid var(--line);color:var(--mute)}
+@media (max-width:900px){.cgrid{grid-template-columns:1fr}}
+@media (max-width:480px){.row2{grid-template-columns:1fr}}
+
+footer{padding-block:clamp(56px,7vw,96px) 30px;overflow:hidden;border-top:1px solid var(--line)}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1.3fr 1fr;gap:32px;margin-bottom:clamp(40px,6vw,80px)}
+.fcol{display:grid;gap:10px;align-content:start;font-size:.92rem;color:var(--mute)}
+.fcol small{font:500 .68rem var(--f-mono);letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:6px}
+.fcol a:not(.btn):not(.logo){text-decoration:none;color:rgba(244,240,238,.82);transition:color .2s;width:fit-content}
+.fcol a:not(.btn):not(.logo):hover{color:#fff}
+.fcol button{background:none;border:0;padding:0;font:inherit;color:rgba(244,240,238,.82);text-align:left;cursor:pointer}
+.fcol button:hover{color:#fff}
+.fcol p{max-width:30ch;margin-top:8px}
+.fcol .ph{width:fit-content}
+.ftop{width:fit-content;margin-top:10px;padding:10px 16px;font-size:.85rem}
+@media (max-width:900px){.fgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.fgrid{grid-template-columns:1fr}}
+.mega{font:800 clamp(3rem,15.5vw,16rem)/1 var(--f-display);letter-spacing:-.04em;text-transform:uppercase;white-space:nowrap;text-align:center;user-select:none;padding-bottom:.08em;
+  background:linear-gradient(180deg,rgba(244,240,238,.14) 0%,rgba(244,240,238,.02) 85%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px 24px;color:var(--mute);font-size:.82rem;margin-top:28px}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ring" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14" fill="#D0142F"/><circle cx="16" cy="16" r="9.5" fill="none" stroke="#F4F0EE" stroke-width="1.6"/><circle cx="16" cy="16" r="6.5" fill="none" stroke="#AEB9C0" stroke-width="1.6"/><circle cx="16" cy="16" r="3" fill="#F4F0EE"/></symbol>
+  <symbol id="arr" viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Перейти к содержанию</a>
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="#hero" aria-label="РОДОС — на главную"><svg><use href="#ring"/></svg><b>РОДОС</b></a>
+    <nav class="nav" id="mainNav" aria-label="Разделы">
+      <a href="#anatomy">Оболочка</a>
+      <a href="#print">Производство</a>
+      <a href="#builder">Конфигуратор</a>
+      <a href="#articles">Статьи</a>
+    </nav>
+    <a class="btn btn-line" href="#contact">Образцы</a>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Меню" aria-expanded="false" aria-controls="mainNav"><svg viewBox="0 0 24 24"><path d="M4 8h16M4 16h16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <section class="hero" id="hero">
+    <div class="hero-bg"><video id="heroVid" autoplay muted loop playsinline preload="auto" aria-label="Три батона варёной колбасы в глянцевой полиамидной оболочке лососёвого и красного цвета"></video></div>
+    <script>(()=>{const v=document.getElementById('heroVid'),m=matchMedia('(max-width:820px)').matches;
+      // на телефоне — вертикальная версия, вырезанная из 4K под экран
+      v.poster=m?'img/hero-poster-m.webp':'img/hero-poster.webp';
+      if(m)v.classList.add('vert');
+      if(!matchMedia('(prefers-reduced-motion: reduce)').matches)v.src=m?'img/hero-m.mp4':'img/hero.mp4';})()</script>
+    <div class="wrap hero-in">
+      <h1><span class="line"><span>Оболочка</span></span><span class="line"><span>с вашей печатью</span></span><span class="line"><span><em>за 3 дня</em></span></span></h1>
+      <p class="lead">Полиамидная колбасная оболочка для мясокомбинатов: печать и гофрирование в собственном цехе, ходовые калибры на складе, отсрочка платежа.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-red" href="#builder">Собрать оболочку <svg><use href="#arr"/></svg></a>
+        <a class="btn btn-line" href="#contact">Запросить образцы</a>
+      </div>
+      <div class="hero-meta">
+        <div><b>Любой объём</b><span>ходовые калибры на складе</span></div>
+        <div><b>Отсрочка</b><span>условия по объёму и истории работы</span></div>
+        <div><b>Технолог</b><span>выезд на производство</span></div>
+        <div><b>12+ лет</b><span>работы с мясокомбинатами</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="anatomy">
+    <div class="wrap">
+      <div class="sec-head anat-head">
+          <h2>Пять слоёв между продуктом и полкой</h2>
+          <p class="lead">Полиамидную оболочку получают соэкструзией — несколько слоёв сплавляются в одну тонкую плёнку, и у каждого своя задача.</p>
+        </div>
+      <div class="anat">
+        <div class="stack-stage" role="img" aria-label="Пять слоёв полиамидной оболочки, разнесённые в объёме">
+          <div class="stack" id="stack">
+            <div class="slab s0" style="--i:0"></div>
+            <div class="slab s1" style="--i:1"></div>
+            <div class="slab s2" style="--i:2"></div>
+            <div class="slab s3" style="--i:3"></div>
+            <div class="slab s4" style="--i:4"></div>
+          </div>
+        </div>
+        <div>
+        <ol class="layers-list">
+          <li><div><b>Внешний полиамид</b><span>Прочность при набивке и клипсовании, глянец, основа для печати.</span></div></li>
+          <li><div><b>Связующий слой</b><span>Скрепляет соседние слои в единую плёнку.</span></div></li>
+          <li><div><b>Барьер</b><span>Задерживает кислород и влагу — продукт не теряет массу и дольше хранится.</span></div></li>
+          <li><div><b>Связующий слой</b><span>Соединяет барьер с внутренним слоем.</span></div></li>
+          <li><div><b>Внутренний слой</b><span>Сцепляется с фаршем и плотно прилегает к батону.</span></div></li>
+        </ol>
+        <p class="fine">Схема упрощённая: число и состав слоёв зависят от марки оболочки.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cut" aria-labelledby="cutH">
+    <img class="lz" data-src="img/cut.webp" data-srcset="img/cut-m.webp 1440w, img/cut.webp 2880w" sizes="100vw" width="2880" height="1613" alt="Срез варёной колбасы в красной многослойной оболочке крупным планом">
+    <div class="wrap">
+      <div><h3 class="cut-h" id="cutH">Результат для продукта</h3></div>
+      <div class="bens">
+        <div><b>Выход без потерь</b><span>Влага остаётся в продукте при варке и хранении.</span></div>
+        <div><b>Дольше срок годности</b><span>Барьер замедляет окисление жиров и изменение цвета.</span></div>
+        <div><b>Стабильный калибр</b><span>Батоны одного диаметра — удобно нарезать и фасовать.</span></div>
+        <div><b>Читаемая маркировка</b><span>Печать выдерживает варку и сохраняется весь срок годности.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec uses" id="uses">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>От сосиски до ветчины</h2>
+        <p class="lead">Калибр, цвет и марку подбираем под продукт и оборудование. Диапазоны ниже ориентировочные.</p>
+      </div>
+      <div class="ugrid">
+        <article class="u"><img class="lz" data-src="img/u-sosiski.webp" data-srcset="img/u-sosiski-m.webp 600w, img/u-sosiski.webp 1000w" sizes="(max-width:1000px) 50vw, 25vw" width="1000" height="1245" alt="Шесть сосисок в розовой полиамидной оболочке на тёмном сланце"><div class="body"><p class="cal">Ø 18–28 мм</p><h3>Сосиски</h3><p>Гофрированные палочки под автоматические линии.</p></div></article>
+        <article class="u"><img class="lz" data-src="img/u-sardelki.webp" data-srcset="img/u-sardelki-m.webp 600w, img/u-sardelki.webp 1000w" sizes="(max-width:1000px) 50vw, 25vw" width="1000" height="1245" alt="Связка сарделек в золотистой оболочке"><div class="body"><p class="cal">Ø 30–45 мм</p><h3>Сардельки</h3><p>Стабильный калибр и ровная перекрутка в связке.</p></div></article>
+        <article class="u"><img class="lz" data-src="img/u-boiled.webp" data-srcset="img/u-boiled-m.webp 600w, img/u-boiled.webp 1000w" sizes="(max-width:1000px) 50vw, 25vw" width="1000" height="1245" alt="Батон варёной колбасы в лососёвой оболочке с нарезкой"><div class="body"><p class="cal">Ø 45–90 мм</p><h3>Варёные колбасы</h3><p>Ровный батон и чистая нарезка без потерь при варке.</p></div></article>
+        <article class="u"><img class="lz" data-src="img/u-ham.webp" data-srcset="img/u-ham-m.webp 600w, img/u-ham.webp 1000w" sizes="(max-width:1000px) 50vw, 25vw" width="1000" height="1245" alt="Ветчина в прозрачной оболочке с нарезкой"><div class="body"><p class="cal">Ø 80–120 мм</p><h3>Ветчины</h3><p>Прозрачная оболочка плотно облегает и показывает продукт.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec builder" id="builder">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Ваша оболочка до первого образца</h2>
+        <p class="lead">Задайте калибр, цвет и маркировку — параметры перейдут в заявку, а мы пришлём образцы и расчёт.</p>
+      </div>
+      <div class="viewer">
+        <div class="loaf" id="loaf" style="--c:#E8806A;--inkc:#fff">
+          <img src="img/base.webp" width="2600" height="1114" alt="Батон колбасы в оболочке выбранного цвета с маркировкой">
+          <div class="tint"></div>
+          <div class="body"><div class="ink" id="ink" aria-hidden="true"></div><div class="gloss"></div><div class="sweep" id="sweep"></div></div>
+        </div>
+        <p class="cfg-line" id="spec" aria-live="polite"></p>
+      </div>
+      <div class="cfg-panel">
+        <div>
+          <label class="h" for="cal">Калибр <output id="calOut">65 мм</output></label>
+          <input type="range" id="cal" min="18" max="120" step="1" value="65" aria-describedby="catLbl">
+          <p class="hint" id="catLbl"></p>
+        </div>
+        <div>
+          <span class="h">Цвет <output id="colOut"></output></span>
+          <div class="dots" id="colors" role="group" aria-label="Цвет оболочки"></div>
+        </div>
+        <div>
+          <label class="h" for="ptext">Маркировка <output id="inkOut"></output></label>
+          <input class="txt" id="ptext" maxlength="28" value="Докторская · ГОСТ">
+          <div class="dots small" id="inks" role="group" aria-label="Цвет печати"></div>
+        </div>
+        <div>
+          <span class="h">Поставка</span>
+          <div class="seg2" role="group" aria-label="Форма поставки">
+            <button type="button" id="optShirr" aria-pressed="true">Гофрированная</button>
+            <button type="button" id="optRoll" aria-pressed="false">В рулоне</button>
+          </div>
+        </div>
+      </div>
+      <div class="cfg-cta">
+        <a class="btn btn-red" href="#contact" id="toForm">Запросить образец <svg><use href="#arr"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec print" id="print">
+    <div class="print-bg"><img class="lz" data-src="img/print.webp" data-srcset="img/print-m.webp 1440w, img/print.webp 2880w" sizes="100vw" width="2880" height="1613" alt=""></div>
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Печать и гофрирование в собственном цехе</h2>
+        <p class="lead">Печатаем и гофрируем сами, без подрядчиков. Поэтому оболочка с вашей маркировкой готова от трёх дней, а небольшая партия не ждёт чужих тиражей.</p>
+      </div>
+      <div class="pgrid">
+        <div><b>Маркировка</b><span>Логотип, название, состав, ГОСТ или ТУ, условия хранения.</span></div>
+        <div><b>Макет</b><span>Готовим с нуля или дорабатываем ваш, согласуем до печати.</span></div>
+        <div><b>Цвет по образцу</b><span>Сверяем цвет оболочки и печати с эталоном.</span></div>
+        <div><b>Повторные заказы</b><span>Храним клише — следующий тираж запускаем без подготовки.</span></div>
+      </div>
+      <div class="timeline" aria-label="Сроки заказа">
+        <div class="tl-bar"><div class="tl-fill" id="tlFill"></div></div>
+        <ol class="tl-steps">
+          <li><p class="d">День 0</p><b>Заявка</b><span>Калибр, цвет, текст, объём.</span></li>
+          <li><p class="d">День 1</p><b>Макет</b><span>Готовим и согласуем с вами.</span></li>
+          <li><p class="d">День 2</p><b>Печать и гофрирование</b><span>Проверяем цвет печати и качество гофрирования.</span></li>
+          <li><p class="d">День 3</p><b>Отгрузка</b><span>Отправляем на ваш комбинат.</span></li>
+        </ol>
+      </div>
+      <div class="shirr" id="shirr">
+      <figure><img class="lz" data-src="img/shirr.webp" data-srcset="img/shirr-m.webp 900w, img/shirr.webp 1800w" sizes="(max-width:900px) 100vw, 50vw" width="1800" height="1357" alt="Гофрированные палочки оболочки лососёвого и золотистого цвета"></figure>
+      <div class="shirr-text">
+        <h3 class="sub-h">Гофрирование под ваше оборудование</h3>
+        <p class="lead">Собираем оболочку в гофрированные палочки под ваш шприц и клипсатор. Равномерная гофра — это ровная набивка без заломов, что особенно важно на автоматических сосисочных линиях.</p>
+        <p class="lead">Ходовые калибры и цвета есть на складе — оболочку без печати отгружаем сразу.</p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="tech" style="padding-top:0">
+    <div class="wrap tech">
+      <figure>
+        <img class="lz" data-src="img/tech.webp" data-srcset="img/tech-m.webp 900w, img/tech.webp 1800w" sizes="(max-width:900px) 100vw, 50vw" width="1800" height="1008" alt="Технолог в белом халате проверяет батоны на раме в цехе мясокомбината">
+        <figcaption><b>12+ лет</b>работы с мясокомбинатами по всей России</figcaption>
+      </figure>
+      <div>
+        <div class="sec-head" style="margin-bottom:0">
+          <h2>Технолог на вашей линии</h2>
+          <p class="lead">Руководитель компании — инженер-технолог. Если на линии появился брак, приезжаем и ищем причину на месте: в рецептуре, режиме термообработки, подготовке оболочки или оборудовании. И только потом предлагаем решение.</p>
+        </div>
+        <ul class="issues" aria-label="С чем к нам обращаются">
+          <li>Бульонно-жировые отёки</li>
+          <li>Морщины после охлаждения</li>
+          <li>Разрывы при набивке</li>
+          <li>Оболочка плохо снимается</li>
+          <li>Заломы при набивке сосисок</li>
+          <li>Цвет не совпал с образцом</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="articles" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>Технологу на заметку</h2>
+        <p class="lead">Короткие разборы частых вопросов: как выбрать оболочку, подготовить её к набивке, избежать брака и правильно оформить маркировку.</p>
+      </div>
+      <div class="arts" id="arts"></div>
+    </div>
+    <dialog class="reader" id="reader" data-lenis-prevent aria-labelledby="readerTitle">
+      <button class="reader-x" type="button" id="readerX" aria-label="Закрыть">×</button>
+      <div class="reader-in" id="readerBody"></div>
+    </dialog>
+  </section>
+
+  <section class="sec" id="faq" style="padding-top:0">
+    <div class="wrap faq-grid">
+      <div class="sec-head faq-head">
+        <h2>Коротко о главном</h2>
+        <p class="lead">Не нашли ответ? Технолог разберёт вашу задачу и предложит оболочку под линию.</p>
+        <a class="btn btn-line" href="#contact">Задать вопрос <svg><use href="#arr"/></svg></a>
+      </div>
+      <div class="faq">
+        <details open><summary>Какой минимальный заказ?</summary><p>Жёсткого минимума нет. Ходовые позиции отгружаем со склада в любом количестве, оболочку с печатью изготавливаем и небольшими партиями.</p></details>
+        <details><summary>Можно ли получить образцы?</summary><p>Да. Пришлём образцы под ваш калибр и цвет — проведите пробную выработку на своей линии до заказа.</p></details>
+        <details><summary>Как быстро изготовите оболочку с нашей маркировкой?</summary><p>От 3 дней после согласования макета. Если макета нет — подготовим.</p></details>
+        <details><summary>Работаете ли вы с отсрочкой платежа?</summary><p>Да. Условия обсуждаем индивидуально — они зависят от объёмов и истории работы.</p></details>
+        <details><summary>Нужно ли замачивать оболочку перед набивкой?</summary><p>Большинство полиамидных оболочек перед набивкой замачивают, режим зависит от марки. Подскажем его для вашей оболочки и оборудования, а при необходимости приедем на производство.</p></details>
+        <details><summary>В какие регионы поставляете?</summary><p>По всей России — от Калининграда до Дальнего Востока.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec contact" id="contact">
+    <div class="wrap cgrid">
+      <div>
+        <div class="sec-head" style="margin:0">
+          <h2>Пришлём образцы под ваш калибр</h2>
+          <p class="lead" style="color:rgba(244,240,238,.78)">Расскажите о продукте и объёме — ответим с расчётом в течение рабочего дня.</p>
+        </div>
+        <div class="cards">
+          <div class="cc"><small class="mono">Телефон</small><span class="v"><span class="ph">+7 (000) 000-00-00</span></span><button class="copy" data-copy="+7 (000) 000-00-00" type="button" aria-label="Копировать телефон">Копировать</button></div>
+          <div class="cc"><small class="mono">Почта</small><span class="v"><span class="ph">info@rodos.ru</span></span><button class="copy" data-copy="info@rodos.ru" type="button" aria-label="Копировать почту">Копировать</button></div>
+          <div class="cc"><small class="mono">Telegram · WhatsApp</small><span class="v"><span class="ph">@rodos</span></span><button class="copy" data-copy="@rodos" type="button" aria-label="Копировать ник в мессенджере">Копировать</button></div>
+          <div class="cc"><small class="mono">Склад</small><span class="v"><span class="ph">Город, адрес склада</span></span></div>
+        </div>
+      </div>
+      <div class="formwrap">
+      <form id="form" novalidate>
+        <h3>Заявка на образцы</h3>
+        <div class="row2">
+          <div class="f"><label for="fName">Имя</label><input id="fName" autocomplete="name" placeholder="Как к вам обращаться" aria-describedby="eName"><small class="err" id="eName"></small></div>
+          <div class="f"><label for="fCompany">Компания</label><input id="fCompany" autocomplete="organization" placeholder="Мясокомбинат"></div>
+        </div>
+        <div class="row2">
+          <div class="f"><label for="fPhone">Телефон</label><input id="fPhone" type="tel" autocomplete="tel" placeholder="+7" aria-describedby="ePhone"><small class="err" id="ePhone"></small></div>
+          <div class="f"><label for="fCity">Город</label><input id="fCity" placeholder="Где производство"></div>
+        </div>
+        <div class="f"><label for="fMsg">Задача</label><textarea id="fMsg" placeholder="Калибр, цвет, маркировка, объём в месяц"></textarea></div>
+        <button class="btn btn-red" type="submit">Отправить заявку <svg><use href="#arr"/></svg></button>
+        <p class="note" id="formNote" hidden></p>
+      </form>
+      <div class="sent" id="sent" hidden tabindex="-1" aria-live="polite">
+        <svg class="sent-ico" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1"/><path d="M15 24.5l6 6 12-13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <h3 id="sentTitle">Спасибо, заявка заполнена</h3>
+        <p id="sentText"></p>
+        <dl class="sent-sum" id="sentSum"></dl>
+        <p class="note">Это демонстрационная версия сайта: заявка пока никуда не отправляется. После запуска она будет приходить на почту «Родоса».</p>
+        <button class="btn btn-line" type="button" id="sentBack">Изменить заявку</button>
+      </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap fgrid">
+    <div class="fcol">
+      <a class="logo" href="#hero" aria-label="РОДОС — наверх"><svg><use href="#ring"/></svg><b>РОДОС</b></a>
+      <p>Полиамидная колбасная оболочка с собственной печатью и гофрированием.</p>
+    </div>
+    <nav class="fcol" aria-label="Разделы в подвале">
+      <small>Разделы</small>
+      <a href="#anatomy">Оболочка</a><a href="#print">Производство</a><a href="#builder">Конфигуратор</a><a href="#faq">Вопросы</a><a href="#contact">Контакты</a>
+    </nav>
+    <div class="fcol" id="footArts"><small>Статьи</small></div>
+    <div class="fcol">
+      <small>Связаться</small>
+      <span class="ph">+7 (000) 000-00-00</span><span class="ph">info@rodos.ru</span>
+      <a class="btn btn-line ftop" href="#hero">Наверх <svg style="transform:rotate(-90deg)"><use href="#arr"/></svg></a>
+    </div>
+  </div>
+  <div class="mega" aria-hidden="true">Родос</div>
+  <div class="wrap foot">
+    <span>ООО «Родос» · ИНН <span class="ph">0000000000</span> · ОГРН <span class="ph">0000000000000</span></span>
+    <span>Юридический адрес: <span class="ph">город, улица, дом</span></span>
+    <span>© 2026 · Designed by <a class="credit" href="https://nolvi-studio.com/" target="_blank" rel="noopener">Nolvi Studio</a></span>
+  </div>
+</footer>
+
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/lenis.min.js"></script>
+<script>
+const NS='http://www.w3.org/2000/svg';
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+const $=id=>document.getElementById(id);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(()=>document.documentElement.classList.remove('wf'));else document.documentElement.classList.remove('wf');
+function el(tag,attrs,parent){const n=document.createElementNS(NS,tag);for(const k in attrs)n.setAttribute(k,attrs[k]);if(parent)parent.appendChild(n);return n}
+
+/* шапка становится плотной после первого экрана */
+const hdr=$('top');
+const onScroll=()=>hdr.classList.toggle('solid',scrollY>40);
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+// меню на телефоне
+$('menuBtn').onclick=()=>{const o=hdr.classList.toggle('open');$('menuBtn').setAttribute('aria-expanded',o)};
+hdr.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>{hdr.classList.remove('open');$('menuBtn').setAttribute('aria-expanded',false)}));
+
+/* ---------- отложенная загрузка фото ниже первого экрана (родной loading=lazy в превью не срабатывает) ---------- */
+(()=>{const imgs=[...document.querySelectorAll('img.lz')];
+  const load=i=>{if(i.dataset.srcset)i.srcset=i.dataset.srcset;i.src=i.dataset.src;i.classList.remove('lz')};
+  if(!('IntersectionObserver' in window)){imgs.forEach(load);return}
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){io.unobserve(e.target);load(e.target)}}),{rootMargin:'900px 0px'});
+  imgs.forEach(i=>io.observe(i));
+  // страховка: через 6 с догружаем всё, что ещё не загружено
+  setTimeout(()=>document.querySelectorAll('img.lz').forEach(load),6000);
+})();
+
+/* ---------- конфигуратор ---------- */
+// Фото белого батона перекрашивается умножением, маркировка ложится поверх с маской цилиндра
+const COLORS=[
+  {name:'лососёвая',fill:'#EE8A72'},
+  {name:'красная',fill:'#B8162E'},
+  {name:'розовая',fill:'#EC9DAA'},
+  {name:'золотистая',fill:'#D9A440'},
+  {name:'копчёная',fill:'#8A4424'},
+  {name:'оранжевая',fill:'#E57A30'},
+  {name:'прозрачная',fill:'#E8B2A6'},
+  {name:'белая',fill:'#F3EFEA'},
+];
+const INKS=[
+  {name:'белый',by:'белым',fill:'#FFFFFF'},{name:'чёрный',by:'чёрным',fill:'#151515',dark:true},{name:'золото',by:'золотом',fill:'#E3B04B'},
+  {name:'бордо',by:'бордо',fill:'#6E0A18',dark:true},{name:'синий',by:'синим',fill:'#1E3C8E',dark:true},
+];
+const CATS=[[28,'сосиски'],[45,'сардельки'],[90,'варёные колбасы'],[120,'ветчины']];
+const cat=c=>CATS.find(([m])=>c<=m)[1];
+const state={caliber:65,color:COLORS[0],ink:INKS[0],text:'ДОКТОРСКАЯ · ГОСТ',shirred:true};
+
+function picker(box,list,key,cls,html){
+  list.forEach(c=>{
+    const b=document.createElement('button');b.type='button';b.className=cls;b.style.setProperty('--c',c.fill);
+    b.innerHTML=html(c);b.title=c.name;b.setAttribute('aria-label',c.name);b.setAttribute('aria-pressed',state[key]===c);
+    b.onclick=()=>{state[key]=c;box.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',x===b));render();sweep()};
+    box.appendChild(b);
+  });
+}
+picker($('colors'),COLORS,'color','',c=>'');
+picker($('inks'),INKS,'ink','',c=>'');
+const cal=$('cal');
+cal.oninput=e=>{state.caliber=+e.target.value;render()};
+cal.onchange=()=>sweep();
+$('ptext').oninput=e=>{state.text=e.target.value;render()};
+const setShirr=v=>{sweep();state.shirred=v;$('optShirr').setAttribute('aria-pressed',v);$('optRoll').setAttribute('aria-pressed',!v);render()};
+$('optShirr').onclick=()=>setShirr(true);$('optRoll').onclick=()=>setShirr(false);
+const specText=()=>{const t=state.text.trim();return `ПА-оболочка · Ø ${state.caliber} мм · ${state.color.name}`+(t?` · печать ${state.ink.name}: «${t}»`:' · без печати')+(state.shirred?' · гофрированные палочки':' · в рулоне')};
+
+// световой блик по батону при смене настроек
+function sweep(){if(reduce)return;const s=$('sweep');s.classList.remove('go');void s.offsetWidth;s.classList.add('go')}
+let raf;
+function render(){
+  cancelAnimationFrame(raf);
+  raf=requestAnimationFrame(()=>{
+    const loaf=$('loaf'),t=state.text.trim();
+    loaf.style.setProperty('--c',state.color.fill);
+    loaf.style.setProperty('--inkc',state.ink.fill);
+    const ink=$('ink');
+    ink.toggleAttribute('data-dark',!!state.ink.dark);
+    const rows=state.caliber<=55?1:2;
+    ink.innerHTML=t?Array.from({length:rows},()=>`<div>${(esc(t)+'&nbsp;&nbsp;&nbsp;·&nbsp;&nbsp;&nbsp;').repeat(8)}</div>`).join(''):'';
+    cal.style.setProperty('--p',((state.caliber-18)/102*100)+'%');
+    $('calOut').textContent=state.caliber+' мм';
+    $('catLbl').textContent='Обычно для этого калибра: '+cat(state.caliber);
+    $('colOut').textContent=state.color.name;
+    $('inkOut').textContent=t?'печать '+state.ink.by:'без печати';
+    $('spec').textContent=`Ø ${state.caliber} мм · ${state.color.name}`+(t?` · печать ${state.ink.by}`:'')+(state.shirred?' · гофрированная':' · в рулоне');
+  });
+}
+function esc(s){return s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
+$('toForm').onclick=()=>{const m=$('fMsg');m.value=specText()+'\nОбъём в месяц: ';setTimeout(()=>m.focus({preventScroll:true}),500)};
+render();
+
+
+/* ---------- статьи ---------- */
+const AP_T='https://api.atlantis-pak.top/files/documents/a4dc23fcbf710d6c571bb534da7073f8.pdf';
+const AP_S='https://api.atlantis-pak.top/files/documents/1fd6ba685afb66c4bc3d7f788bd89c70.pdf';
+const ARTICLES=[
+{tag:'Выбор',title:'Как подобрать полиамидную оболочку под продукт',lead:'Барьер или дымопроницаемость, калибр, переполнение, цвет и печать — что важно учесть до заказа.',
+body:`<p>Полиамидные оболочки многослойные: в регламентах производителей встречаются, например, пятислойные конструкции из полиамида, полиолефина и адгезива. Низкая проницаемость для кислорода и водяного пара — главное их свойство.</p>
+<h4>Что даёт барьер</h4>
+<ul><li>нет потерь массы при термообработке и хранении;</li><li>микробиологическая стабильность продукта;</li><li>медленнее прогоркают жиры и меняется цвет;</li><li>батон не морщится весь срок годности.</li></ul>
+<h4>Барьерная или дымопроницаемая</h4>
+<p>Барьерные оболочки рассчитаны на продукты без копчения: варёные колбасы, ветчины, ливерные и кровяные колбасы, паштеты, зельцы, плавленые сыры. Для полукопчёных и варёно-копчёных колбас, сарделек и шпикачек выпускают дымопроницаемые полиамидные оболочки — в них возможны обжарка и копчение.</p>
+<h4>Калибр и переполнение</h4>
+<p>Диапазон калибров зависит от марки: от тонких оболочек для порционных продуктов до 150–200 мм у отдельных барьерных марок. Норма переполнения тоже у каждой марки своя — в регламентах встречаются значения от 2–3 % до 12–16 %. Единой цифры для «полиамида вообще» нет: набивать нужно по паспорту конкретной оболочки.</p>
+<h4>Нарезка и внешний вид</h4>
+<p>Для продуктов под нарезку выпускают оболочки с повышенной точностью калибра и продольным разрывом при снятии. Цвет выбирают по каталогу или заказывают отдельно, печать бывает односторонней и двусторонней, вплоть до полноцветной; краски рассчитаны на варку и контакт с жиром.</p>`,
+src:[['Технологический регламент оболочек «Амифлекс», ООО «Атлантис-Пак» (PDF)',AP_T],['Технологический регламент оболочки «Амисмок», ООО «Атлантис-Пак» (PDF)',AP_S]]},
+{tag:'Брак',title:'Почему появляются бульонно-жировые отёки',lead:'Отёки чаще всего связаны с недонабивкой, лишней влагой в рецептуре и режимом варки — разбираем по шагам.',
+body:`<p>Бульонно-жировой отёк — скопление бульона и жира между оболочкой и фаршем. Причин обычно несколько, и искать их стоит по всей цепочке: рецептура, набивка, термообработка, охлаждение.</p>
+<h4>Набивка</h4>
+<p>Производители оболочек прямо называют набивку с рекомендованным переполнением мерой, которая снижает риск отёков. Недонабитый батон оставляет зазор, где и собирается бульон. Прокалывать (штриковать) батоны в полиамидной оболочке нельзя — она лопается.</p>
+<h4>Рецептура</h4>
+<p>В барьерной оболочке фарш не теряет влагу при варке. Поэтому регламенты рекомендуют уменьшать количество добавляемой воды по сравнению с рецептурами для натуральных, белковых и вискозно-армированных оболочек. Водосвязывающие добавки лучше вносить в куттер в виде гелей или эмульсий, а не сухими. На стабильность эмульсии влияет и баланс жира и воды: недостаток жира может вызвать отделение влаги, избыток воды снижает стабильность.</p>
+<h4>Варка</h4>
+<p>Слишком высокая стартовая температура может привести к расслоению фаршевой эмульсии. Регламенты рекомендуют начинать с 50–55 °C и вести ступенчатую или дельта-варку до 72 °C в центре батона.</p>
+<h4>Охлаждение</h4>
+<p>Сразу после варки — душирование до 25–35 °C в центре батона, затем обсушка. Охлаждение холодным воздухом и сквозняки приводят к морщинам.</p>
+<h4>Оболочка</h4>
+<p>Внутренний слой оболочки должен удовлетворительно сцепляться с фаршем: при плохой адгезии после охлаждения в зазоре образуются желейные карманы.</p>`,
+src:[['Технологический регламент оболочек «Амифлекс», ООО «Атлантис-Пак» (PDF)',AP_T],['Прохоренко, Кузнецова. Паштеты: особенности сырья, ингредиентов и технологического процесса. «Все о мясе», 2011, №2',"https://cyberleninka.ru/article/n/pashtety-osobennosti-syrya-ingredientov-i-tehnologicheskogo-protsessa"],['Патент US5219002A — многослойная полиамидная оболочка',"https://patents.google.com/patent/US5219002A/en"]]},
+{tag:'Подготовка',title:'Замачивание, набивка, клипсование',lead:'Как готовить оболочку к работе, чего нельзя делать с горячей водой и как подобрать цевку и клипсу.',
+body:`<p>Требования к подготовке зависят от марки оболочки — всегда сверяйтесь с паспортом. Ниже — типовые рекомендации из технологических регламентов производителей.</p>
+<h4>Замачивание</h4>
+<ul><li>в питьевой воде 20–25 °C: нарезанную оболочку — не менее 30 минут, гофрированную — не менее 60 минут, не вынимая из сетки;</li><li>вода должна смочить и внутреннюю поверхность;</li><li>горячую воду использовать нельзя: начинается неконтролируемая усадка, уменьшаются длина и калибр.</li></ul>
+<p>Есть оболочки, которые не нужно замачивать: готовые к использованию гофрокуклы и отдельные марки. У таких оболочек может быть заметно короче срок хранения.</p>
+<h4>Набивка и клипсование</h4>
+<ul><li>цевка шприца должна соответствовать внутреннему диаметру гофрированной палочки;</li><li>набивать — с переполнением, указанным для конкретной марки;</li><li>клипса должна надёжно зажимать оболочку и не травмировать её;</li><li>горячие паштеты (фарш выше 40 °C) требуют большего переполнения.</li></ul>
+<h4>Хранение</h4>
+<p>Типовые условия — 5–35 °C при влажности не выше 80 %. Оболочку, хранившуюся на морозе, перед работой выдерживают сутки при комнатной температуре. Лишнюю замоченную оболочку оставляют влажной вдали от тепла и сквозняков и на следующий день замачивают повторно.</p>`,
+src:[['Технологический регламент оболочек «Амифлекс», ООО «Атлантис-Пак» (PDF)',AP_T],['Технологический регламент оболочки «Амисмок», ООО «Атлантис-Пак» (PDF)',AP_S],['Карточка оболочки, не требующей замачивания, — «Атлантис-Пак»',"https://www.atlantis-pak.ru/catalog/product/amifleks-ekspress-41"]]},
+{tag:'Маркировка',title:'Что обязательно указать на колбасных изделиях',lead:'Требования ТР ТС 022/2011 и ТР ТС 034/2013 к маркировке — и что из этого можно напечатать прямо на оболочке.',
+body:`<h4>Обязательные сведения (ТР ТС 022/2011, ст. 4.1)</h4>
+<ul><li>наименование пищевой продукции;</li><li>состав;</li><li>количество;</li><li>дата изготовления;</li><li>срок годности;</li><li>условия хранения;</li><li>наименование и место нахождения изготовителя (и импортёра, если есть);</li><li>рекомендации и ограничения по использованию;</li><li>пищевая ценность;</li><li>сведения о наличии ГМО;</li><li>единый знак обращения продукции на рынке ЕАЭС.</li></ul>
+<h4>Что должно быть именно на упаковке</h4>
+<p>Наименование, дата изготовления, срок годности и условия хранения указываются на потребительской упаковке или на трудноудаляемой этикетке. Остальные сведения допускается давать на упаковке, этикетке или листке-вкладыше (ТР ТС 022/2011, ст. 4.12).</p>
+<h4>Требования для мясной продукции (ТР ТС 034/2013)</h4>
+<ul><li>в наименовании или рядом с ним указывают группу продукции — мясная, мясосодержащая, мясорастительная, растительно-мясная — и её вид, например «колбасное изделие» (п. 109);</li><li>для колбасных изделий указывают группу, вид и способ обработки — например, «варёные» или «копчёные»; категорию или сорт — при наличии; дополнительно можно указать «колбаса», «сосиски», «сардельки» (п. 121).</li></ul>
+<h4>Печать на оболочке</h4>
+<p>Постоянную часть маркировки — наименование, состав, условия хранения, сведения об изготовителе — удобно нанести на оболочку флексопечатью: краски рассчитаны на варку и контакт с жиром. Дату изготовления обычно наносят отдельно.</p>
+<p>Статья — обзор, а не юридическая консультация: перед запуском макета сверяйтесь с действующей редакцией регламентов.</p>`,
+src:[['ТР ТС 022/2011 «Пищевая продукция в части её маркировки» — действующая редакция',"https://www.alta.ru/tamdoc/11sr0881/"],['ТР ТС 034/2013 «О безопасности мяса и мясной продукции» — действующая редакция',"https://www.alta.ru/tamdoc/13sr0068/"]]},
+];
+const arrow='<svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+ARTICLES.forEach((a,i)=>{
+  const f=document.createElement('button');f.type='button';f.textContent=a.title;f.onclick=()=>openArticle(i);$('footArts').appendChild(f);
+  const b=document.createElement('button');b.type='button';b.className='art';
+  b.innerHTML=`<small>${a.tag}</small><b>${a.title}</b><span>${a.lead}</span><i>Читать ${arrow}</i>`;
+  b.onclick=()=>openArticle(i);$('arts').appendChild(b);
+});
+const reader=$('reader');
+function openArticle(i){
+  const a=ARTICLES[i];
+  $('readerBody').innerHTML=`<small class="mono tag">${a.tag}</small><h3 id="readerTitle">${a.title}</h3>${a.body}<div class="src"><b>Источники</b><ul>${a.src.map(([t,u])=>`<li><a href="${u}" target="_blank" rel="noopener">${t}</a></li>`).join('')}</ul></div>`;
+  if(reader.showModal)reader.showModal();else reader.setAttribute('open','');
+  if(lenis)lenis.stop();
+  typo($('readerBody'));reader.scrollTop=0;
+}
+$('readerX').onclick=()=>reader.close();
+reader.addEventListener('click',e=>{if(e.target===reader)reader.close()});
+
+/* ---------- типографика: неразрывные пробелы ---------- */
+const SHORT=/(^|[\s«(—])([А-Яа-яЁё]{1,2}|для|под|над|без|при|что|как)\s+(?=\S)/g;
+const UNIT=/(\d)\s+(мм|см|кг|г|°C|%|мин|дней|дня|суток|лет|км)(?![а-яё])/g;
+function typo(root){
+  const w=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>/^(SCRIPT|STYLE|TEXTAREA|OPTION)$/.test(n.parentNode.nodeName)?2:1});
+  const list=[];while(w.nextNode())list.push(w.currentNode);
+  list.forEach(n=>{const t=n.nodeValue.replace(SHORT,'$1$2\u00A0').replace(SHORT,'$1$2\u00A0').replace(UNIT,'$1\u00A0$2').replace(/Ø\s/g,'Ø\u00A0');if(t!==n.nodeValue)n.nodeValue=t});
+}
+typo(document.body);
+
+/* контакты и форма */
+document.querySelectorAll('.copy').forEach(b=>b.onclick=()=>{
+  const v=b.dataset.copy,done=()=>{b.textContent='Скопировано';setTimeout(()=>b.textContent='Копировать',1600)};
+  const sel=()=>{const r=document.createRange();r.selectNodeContents(b.previousElementSibling);const s=getSelection();s.removeAllRanges();s.addRange(r)};
+  navigator.clipboard?navigator.clipboard.writeText(v).then(done,sel):sel();
+});
+const field=(id,err,msg)=>{const i=$(id),e=$(err),bad=!!msg;i.setAttribute('aria-invalid',bad);e.textContent=msg||'';return !bad};
+['fName','fPhone'].forEach(id=>$(id).addEventListener('input',()=>{$(id).setAttribute('aria-invalid',false);$(id==='fName'?'eName':'ePhone').textContent=''}));
+$('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=$('fName').value.trim(),phone=$('fPhone').value.trim();
+  const okName=field('fName','eName',name?'':'Как к вам обращаться?');
+  const okPhone=field('fPhone','ePhone',phone.replace(/\D/g,'').length>=10?'':'Укажите телефон — перезвоним с расчётом');
+  if(!okName||!okPhone){$(okName?'fPhone':'fName').focus();return}
+  const rows=[['Имя',name],['Компания',$('fCompany').value.trim()],['Телефон',phone],['Город',$('fCity').value.trim()],['Задача',$('fMsg').value.trim()]].filter(r=>r[1]);
+  $('sentSum').innerHTML=rows.map(([k,v])=>`<dt>${k}</dt><dd>${esc(v)}</dd>`).join('');
+  $('sentText').textContent=`${name}, так будет выглядеть подтверждение. После запуска сайта мы свяжемся с вами в течение рабочего дня и пришлём расчёт и образцы.`;
+  typo($('sent'));
+  $('form').hidden=true;$('sent').hidden=false;$('sent').focus({preventScroll:true});
+});
+$('sentBack').onclick=()=>{$('sent').hidden=true;$('form').hidden=false;$('fName').focus({preventScroll:true})};
+
+/* ---------- движение ---------- */
+if(window.gsap&&window.ScrollTrigger&&!reduce){
+  gsap.registerPlugin(ScrollTrigger);
+  // вход первого экрана
+  gsap.from('.hero h1 .line > span',{yPercent:110,duration:1.1,ease:'power4.out',stagger:.09,delay:.1});
+  gsap.from(".hero-bg video",{scale:1.04,duration:2.2,ease:'power3.out'});
+  gsap.from(['.hero .lead','.hero-ctas','.hero-meta'],{y:24,duration:.9,ease:'power3.out',stagger:.08,delay:.45});
+  // параллакс
+  gsap.to('.hero-bg',{yPercent:8,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
+  gsap.to('.print-bg',{yPercent:14,ease:'none',scrollTrigger:{trigger:'.print',start:'top bottom',end:'bottom top',scrub:true}});
+  gsap.fromTo('.cut img',{scale:1.12},{scale:1,ease:'none',scrollTrigger:{trigger:'.cut',start:'top bottom',end:'bottom top',scrub:true}});
+  // слои расходятся при прокрутке
+  const stack=$('stack');
+  ScrollTrigger.create({trigger:'#anatomy',start:'top 80%',end:'center 40%',scrub:true,
+    onUpdate:s=>{stack.style.setProperty('--gap',(12+s.progress*30)+'px');stack.style.transform=`rotateX(${58-s.progress*6}deg) rotateZ(${-38+s.progress*8}deg)`}});
+  // шкала сроков заполняется
+  gsap.fromTo('#tlFill',{scaleX:0},{scaleX:1,ease:'none',scrollTrigger:{trigger:'.timeline',start:'top 85%',end:'top 45%',scrub:true}});
+  // большой логотип в подвале поднимается при прокрутке
+  gsap.from('.mega',{yPercent:18,ease:'none',scrollTrigger:{trigger:'footer',start:'top bottom',end:'bottom bottom',scrub:true}});
+}
+
+/* ---------- инерционная прокрутка: только мышь/тачпад, на телефоне — родная ---------- */
+let lenis=null;
+if(window.Lenis&&window.gsap&&window.ScrollTrigger&&!reduce&&matchMedia('(pointer:fine)').matches){
+  lenis=new Lenis({lerp:.11,wheelMultiplier:1});
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+    const id=a.getAttribute('href');const t=id.length>1&&document.querySelector(id);
+    if(t){e.preventDefault();lenis.scrollTo(t,{offset:id==='#hero'?0:-80,duration:1.2,onComplete:()=>{if(!t.hasAttribute('tabindex'))t.setAttribute('tabindex','-1');t.focus({preventScroll:true})}})}
+  }));
+  reader.addEventListener('close',()=>lenis.start());
+}
+
+/* ---------- тестовая тонкая анимация: FX=false выключает целиком ---------- */
+if(!(window.gsap&&window.ScrollTrigger)||reduce)$('stack').style.setProperty('--gap','34px');
+const FX=true;
+if(FX&&window.gsap&&window.ScrollTrigger&&!reduce){
+  // блоки мягко поднимаются при появлении; в покое всё видно
+  gsap.set('.sec-head, .ugrid .u, .arts .art, .pgrid > div, .layers-list li, .faq details, .tech figure',{y:32});
+  ScrollTrigger.batch('.sec-head, .ugrid .u, .arts .art, .pgrid > div, .layers-list li, .faq details, .tech figure',{start:'top 92%',once:true,
+    onEnter:els=>gsap.to(els,{y:0,duration:.9,ease:'power3.out',stagger:.06,overwrite:true})});
+  // кнопки слегка тянутся к курсору
+  if(matchMedia('(pointer:fine)').matches)document.querySelectorAll('.btn').forEach(b=>{
+    b.addEventListener('mousemove',e=>{const r=b.getBoundingClientRect();gsap.to(b,{x:(e.clientX-r.left-r.width/2)*.18,y:(e.clientY-r.top-r.height/2)*.28,duration:.4,ease:'power3.out'})});
+    b.addEventListener('mouseleave',()=>gsap.to(b,{x:0,y:0,duration:.6,ease:'elastic.out(1,.45)'}));
+  });
+}
+</script>
+
+</body>
+</html>
