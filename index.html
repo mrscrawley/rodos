@@ -45,7 +45,8 @@
 }
 *{box-sizing:border-box}
 html{scroll-padding-top:84px}
-body{background:var(--ink);color:var(--bone);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{overflow-x:clip}
+body{background:var(--ink);color:var(--bone);font:400 17px/1.6 var(--f-body);-webkit-font-smoothing:antialiased;overflow-x:hidden;overflow-x:clip}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--ink)}
 a{color:inherit}
 img{display:block;max-width:100%}
@@ -88,6 +89,7 @@ main:focus{outline:none}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
 .logo svg{width:34px;height:34px}
 .logo b{font:900 1.25rem/1 var(--f-display);letter-spacing:.08em}
+@media (max-width:480px){.top .wrap{gap:10px;height:64px}.logo{gap:9px}.logo svg{width:28px;height:28px}.logo b{font-size:1.05rem}.top .btn{padding:10px 14px;font-size:.82rem}.menu-btn{width:40px;height:40px}.top.open .nav{top:64px}}
 .nav{display:flex;gap:26px;margin-left:auto;font-size:.93rem}
 .nav a{text-decoration:none;color:rgba(244,240,238,.75);transition:color .2s}
 .nav a:hover{color:#fff}
@@ -163,11 +165,11 @@ section{position:relative}
 .layers-list li:nth-child(5){--c:#F0B4C1}
 .layers-list span{color:var(--mute);font-size:.9rem;line-height:1.45}
 .fine{font:400 .78rem/1.5 var(--f-mono);color:var(--mute);margin-top:18px}
-@media (max-width:900px){.anat{grid-template-columns:1fr}.stack-stage{max-width:520px;width:100%;margin:0 auto}}
+@media (max-width:900px){.anat{grid-template-columns:1fr}.stack-stage{max-width:520px;width:100%;margin:0 auto;aspect-ratio:1/1;max-height:none}.stack{margin-top:16%}}
 
 /* benefits with cut photo */
 #anatomy{background:linear-gradient(180deg,var(--ink) 0%,var(--ink) 45%,#020101 100%)}
-.cut{position:relative;background:linear-gradient(180deg,#020101 0%,#020101 calc(100% - clamp(260px,28vw,440px)),var(--ink) 100%);padding-block:clamp(48px,7vw,110px)}
+.cut{position:relative;overflow:hidden;background:linear-gradient(180deg,#020101 0%,#020101 calc(100% - clamp(260px,28vw,440px)),var(--ink) 100%);padding-block:clamp(48px,7vw,110px)}
 .cut img{width:100%;height:clamp(420px,52vw,780px);object-fit:cover;object-position:50% 45%;-webkit-mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.25) 10%,rgba(0,0,0,.7) 22%,#000 34%,#000 72%,transparent 100%),linear-gradient(90deg,transparent 0%,#000 6%,#000 94%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.25) 10%,rgba(0,0,0,.7) 22%,#000 34%,#000 72%,transparent 100%),linear-gradient(90deg,transparent 0%,#000 6%,#000 94%,transparent 100%);mask-composite:intersect}
 .cut .wrap{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.5fr);gap:clamp(28px,5vw,72px);align-items:start;padding-block:0;position:relative;margin-top:clamp(8px,2vw,32px)}
 .cut .wrap > div:first-child{display:grid;gap:22px}
@@ -896,7 +898,8 @@ if(window.gsap&&window.ScrollTrigger&&!reduce){
   // слои двигаются только через transform (видеокарта), scrub с инерцией сглаживает рывки пальца на телефоне
   const stack=$('stack'),slabs=gsap.utils.toArray('#stack .slab'),turn={p:0};
   const layersTl=gsap.timeline({scrollTrigger:{trigger:'#anatomy',start:'top 80%',end:'center 40%',scrub:.9}});
-  slabs.forEach((el,i)=>layersTl.fromTo(el,{z:i*12},{z:i*42,ease:'none',force3D:true},0));
+  const spread=matchMedia('(max-width:900px)').matches?26:42;  // на телефоне разлёт меньше, чтобы не выходить за блок
+  slabs.forEach((el,i)=>layersTl.fromTo(el,{z:i*12},{z:i*spread,ease:'none',force3D:true},0));
   layersTl.to(turn,{p:1,ease:'none',onUpdate:()=>{stack.style.transform=`rotateX(${58-turn.p*6}deg) rotateZ(${-38+turn.p*8}deg)`}},0);
   // шкала сроков заполняется
   gsap.fromTo('#tlFill',{scaleX:0},{scaleX:1,ease:'none',scrollTrigger:{trigger:'.timeline',start:'top 85%',end:'top 45%',scrub:true}});
